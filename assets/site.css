@@ -490,6 +490,70 @@ kbd {
   margin: 6px 0 28px;
 }
 
+/* Просмотр снимка поверх страницы */
+
+.shot {
+  cursor: zoom-in;
+}
+
+.viewer {
+  position: fixed;
+  inset: 0;
+  z-index: 100;
+  background: rgba(12, 10, 9, 0.92);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  padding: 56px 24px 24px;
+  cursor: zoom-out;
+}
+
+.viewer[hidden] {
+  display: none;
+}
+
+.viewer img {
+  max-width: 100%;
+  max-height: calc(100vh - 140px);
+  width: auto;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
+}
+
+.viewer-caption {
+  margin: 0;
+  max-width: 900px;
+  color: #d8cec4;
+  font-size: 15px;
+  text-align: center;
+}
+
+.viewer-close {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  width: 40px;
+  height: 40px;
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  background: rgba(43, 38, 34, 0.9);
+  color: #ece4dc;
+  display: grid;
+  place-items: center;
+  cursor: pointer;
+}
+
+.viewer-close:hover {
+  background: #4a3626;
+}
+
+body.viewer-open {
+  overflow: hidden;
+}
+
 /* Подвал */
 
 .foot {
