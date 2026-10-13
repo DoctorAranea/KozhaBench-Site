@@ -3,7 +3,7 @@
 // Страница показывает часть на своём языке. Ответ на несколько минут запоминается во вкладке, чтобы не тратить
 // предел GitHub - 60 запросов в час с одного адреса.
 (function () {
-  var api = "https://api.github.com/repos/DoctorAranea/LeatherDraft-Releases/releases";
+  var api = "https://api.github.com/repos/DoctorAranea/KozhaBench-Releases/releases";
   var cacheMinutes = 10;
   var lang = document.documentElement.lang === "en" ? "en" : "ru";
 

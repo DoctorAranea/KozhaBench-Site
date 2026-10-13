@@ -1,6 +1,6 @@
-# Сайт LeatherDraft
+# Сайт KozhaBench
 
-Страницы сайта программы LeatherDraft: обычные HTML и CSS, без сборки. GitHub Pages показывает их как есть.
+Страницы сайта программы KozhaBench: обычные HTML и CSS, без сборки. GitHub Pages показывает их как есть.
 
 ## Что где
 
@@ -21,7 +21,7 @@
 1. Залейте файлы в ветку `master`.
 2. В репозитории на GitHub: "Settings" - "Pages", в "Source" выберите "Deploy from a branch", ветку `master`
    и папку `/ (root)`, нажмите "Save".
-3. Через минуту-две сайт откроется по адресу `https://doctoraranea.github.io/LeatherDraft-Site/`.
+3. Через минуту-две сайт откроется по адресу `https://doctoraranea.github.io/KozhaBench-Site/`.
 
 ## Как посмотреть до публикации
 

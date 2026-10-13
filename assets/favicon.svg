@@ -1,8 +1,16 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120">
-  <!-- Упрощённый знак для вкладки браузера, как значок программы на панели задач. -->
-  <path d="M14,32 Q14,8 30,2 Q46,8 46,32 L46,64 L80,64 L80,98 L24,98 Q14,98 14,88 Z"
-        fill="#B07440" stroke="#3E2210" stroke-width="5" stroke-linejoin="round" />
-  <path d="M78,48 C114,48 114,111 78,111" fill="none" stroke="#5A3D10" stroke-width="16" stroke-linecap="round" />
-  <path d="M78,48 C114,48 114,111 78,111" fill="none" stroke="#E8BE62" stroke-width="10" stroke-linecap="round" />
-  <rect x="71" y="42" width="13" height="76" rx="6.5" fill="#E8BE62" stroke="#5A3D10" stroke-width="3" />
+  <!-- Упрощённый знак для вкладки браузера, как значок программы в мелких размерах: без строчки, K и люверс толще. -->
+  <defs>
+    <mask id="hole">
+      <rect width="120" height="120" fill="white" />
+      <circle cx="96" cy="24" r="4.6" fill="black" />
+    </mask>
+  </defs>
+  <g mask="url(#hole)">
+    <path d="M28,8 H92 A20,20 0 0 1 112,28 V92 A20,20 0 0 1 92,112 H28 A20,20 0 0 1 8,92 V28 A20,20 0 0 1 28,8 Z" fill="#9A5F35" stroke="#3E2210" stroke-width="5" stroke-linejoin="round" />
+    <path d="M42,34 V88 M42,64 L72,35 M52,56 L77,88" fill="none" stroke="#3E2210" stroke-width="20" stroke-linecap="round" stroke-linejoin="round" />
+    <path d="M42,34 V88 M42,64 L72,35 M52,56 L77,88" fill="none" stroke="#E8BE62" stroke-width="14" stroke-linecap="round" stroke-linejoin="round" />
+    <circle cx="96" cy="24" r="8" fill="none" stroke="#3E2210" stroke-width="7.6" />
+    <circle cx="96" cy="24" r="8" fill="none" stroke="#E8BE62" stroke-width="4.4" />
+  </g>
 </svg>
