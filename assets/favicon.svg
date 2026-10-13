@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120">
+  <!-- Упрощённый знак для вкладки браузера, как значок программы на панели задач. -->
+  <path d="M14,32 Q14,8 30,2 Q46,8 46,32 L46,64 L80,64 L80,98 L24,98 Q14,98 14,88 Z"
+        fill="#B07440" stroke="#3E2210" stroke-width="5" stroke-linejoin="round" />
+  <path d="M78,48 C114,48 114,111 78,111" fill="none" stroke="#5A3D10" stroke-width="16" stroke-linecap="round" />
+  <path d="M78,48 C114,48 114,111 78,111" fill="none" stroke="#E8BE62" stroke-width="10" stroke-linecap="round" />
+  <rect x="71" y="42" width="13" height="76" rx="6.5" fill="#E8BE62" stroke="#5A3D10" stroke-width="3" />
+</svg>

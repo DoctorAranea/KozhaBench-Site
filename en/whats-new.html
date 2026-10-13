@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>What's new - LeatherDraft</title>
+  <meta name="description" content="All versions of LeatherDraft and what is new in them.">
+  <link rel="icon" href="../assets/favicon.svg" type="image/svg+xml">
+  <link rel="alternate" hreflang="ru" href="../whats-new.html">
+  <link rel="alternate" hreflang="en" href="whats-new.html">
+  <link rel="stylesheet" href="../assets/site.css">
+  <script src="../assets/site.js"></script>
+  <script src="../assets/releases.js"></script>
+</head>
+<body>
+  <header class="top">
+    <div class="wrap">
+      <a class="brand" href="index.html"><img src="../assets/logo.svg" alt=""><span>LeatherDraft</span></a>
+      <nav class="nav">
+        <a class="optional" href="index.html#features">Features</a>
+        <a class="optional" href="index.html#download">Download</a>
+        <a class="optional" href="whats-new.html" aria-current="page">What's new</a>
+        <a href="first-steps.html">First steps</a>
+        <a href="../whats-new.html" lang="ru" title="Русская версия">RU</a>
+        <button class="icon-button" id="theme" type="button" title="Light or dark theme" aria-label="Light or dark theme">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 3a9 9 0 1 0 9 9 7 7 0 0 1-9-9z"/></svg>
+        </button>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section>
+      <div class="wrap">
+        <h2>What's new</h2>
+        <p class="section-lead">All versions, newest first. Updates arrive in the program on their own, and the installer behind the "Download" button is always the latest version.</p>
+        <div class="releases" id="releases">
+          <p class="loading">Loading the list of versions from GitHub...</p>
+        </div>
+        <p class="note" id="releases-failed" hidden>Could not load the list of versions. It is also on the <a href="https://github.com/DoctorAranea/LeatherDraft-Releases/releases">releases page on GitHub</a>.</p>
+        <noscript><p class="note">The list of versions is loaded from GitHub and needs JavaScript. It is also on the <a href="https://github.com/DoctorAranea/LeatherDraft-Releases/releases">releases page on GitHub</a>.</p></noscript>
+        <div class="actions" id="download-latest" style="margin-top: 32px">
+          <a class="button" href="https://github.com/DoctorAranea/LeatherDraft-Releases/releases/latest/download/LeatherDraft-win-Setup.exe">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v12M7 10l5 5 5-5M5 21h14"/></svg>
+              <span class="button-text">Download for Windows<small data-latest-version hidden></small></span>
+            </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="foot">
+    <div class="wrap">
+      <span>LeatherDraft</span>
+      <a href="https://github.com/DoctorAranea/LeatherDraft-Releases/releases">Releases on GitHub</a>
+      <a href="https://github.com/DoctorAranea/LeatherDraft-Releases/blob/master/LICENSE.txt">Terms of use</a>
+      <a href="../whats-new.html" lang="ru">Русский</a>
+      <span>This site collects nothing about you: no counters, no cookies.</span>
+    </div>
+  </footer>
+</body>
+</html>

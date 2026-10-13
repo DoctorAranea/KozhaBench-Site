@@ -1,0 +1,543 @@
+/* Оформление сайта в цветах программы: тёмная тема "кожа" по умолчанию, светлая - по выбору или по настройке системы. */
+
+:root {
+  --bg: #1c1a18;
+  --surface: #2b2622;
+  --surface-2: #352f2b;
+  --line: #3d3631;
+  --ink: #ece4dc;
+  --ink-2: #b5aa9f;
+  --muted: #8f857b;
+  --accent: #a8693a;
+  --accent-hover: #b97a49;
+  --accent-ink: #e9b98a;
+  --accent-soft: #4a3626;
+  --on-accent: #ffffff;
+  --shadow: 0 10px 30px rgba(0, 0, 0, 0.35);
+  color-scheme: dark;
+}
+
+@media (prefers-color-scheme: light) {
+  :root:not([data-theme="dark"]) {
+    --bg: #f7f5f2;
+    --surface: #ffffff;
+    --surface-2: #f1ece6;
+    --line: #e2d9cf;
+    --ink: #3a302a;
+    --ink-2: #5f544b;
+    --muted: #8a7f75;
+    --accent: #8a5530;
+    --accent-hover: #7a4826;
+    --accent-ink: #6e4223;
+    --accent-soft: #f3e6d6;
+    --on-accent: #ffffff;
+    --shadow: 0 10px 30px rgba(58, 48, 42, 0.12);
+    color-scheme: light;
+  }
+}
+
+:root[data-theme="light"] {
+  --bg: #f7f5f2;
+  --surface: #ffffff;
+  --surface-2: #f1ece6;
+  --line: #e2d9cf;
+  --ink: #3a302a;
+  --ink-2: #5f544b;
+  --muted: #8a7f75;
+  --accent: #8a5530;
+  --accent-hover: #7a4826;
+  --accent-ink: #6e4223;
+  --accent-soft: #f3e6d6;
+  --on-accent: #ffffff;
+  --shadow: 0 10px 30px rgba(58, 48, 42, 0.12);
+  color-scheme: light;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--ink);
+  font-family: "Segoe UI", system-ui, -apple-system, Roboto, Arial, sans-serif;
+  font-size: 17px;
+  line-height: 1.6;
+}
+
+a {
+  color: var(--accent-ink);
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+.wrap {
+  max-width: 1120px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+/* Шапка */
+
+.top {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  background: color-mix(in srgb, var(--bg) 88%, transparent);
+  backdrop-filter: blur(8px);
+  border-bottom: 1px solid var(--line);
+}
+
+.top .wrap {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  height: 64px;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: var(--ink);
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 19px;
+}
+
+.brand img {
+  width: 34px;
+  height: 34px;
+}
+
+.nav {
+  display: flex;
+  gap: 4px;
+  margin-left: auto;
+  align-items: center;
+}
+
+.nav a {
+  color: var(--ink-2);
+  text-decoration: none;
+  padding: 6px 12px;
+  border-radius: 8px;
+  font-size: 15px;
+}
+
+.nav a:hover {
+  background: var(--surface-2);
+  color: var(--ink);
+}
+
+.nav a[aria-current="page"] {
+  color: var(--accent-ink);
+  background: var(--accent-soft);
+}
+
+.icon-button {
+  border: 1px solid var(--line);
+  background: transparent;
+  color: var(--ink-2);
+  border-radius: 8px;
+  width: 36px;
+  height: 36px;
+  display: inline-grid;
+  place-items: center;
+  cursor: pointer;
+}
+
+.icon-button:hover {
+  background: var(--surface-2);
+  color: var(--ink);
+}
+
+/* Первый экран */
+
+.hero {
+  padding: 72px 0 48px;
+}
+
+.hero-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1.35fr);
+  gap: 48px;
+  align-items: center;
+}
+
+.hero h1 {
+  font-size: clamp(34px, 5vw, 52px);
+  line-height: 1.1;
+  margin: 0 0 18px;
+  letter-spacing: -0.5px;
+}
+
+.hero .lead {
+  font-size: 19px;
+  color: var(--ink-2);
+  margin: 0 0 28px;
+}
+
+.button {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  background: var(--accent);
+  color: var(--on-accent);
+  text-decoration: none;
+  font-weight: 600;
+  padding: 13px 22px;
+  border-radius: 10px;
+  box-shadow: var(--shadow);
+}
+
+.button:hover {
+  background: var(--accent-hover);
+}
+
+.button-text {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.25;
+}
+
+.button-text small {
+  font-size: 12px;
+  font-weight: 400;
+  opacity: 0.85;
+}
+
+.button.secondary {
+  background: transparent;
+  color: var(--ink);
+  border: 1px solid var(--line);
+  box-shadow: none;
+}
+
+.button.secondary:hover {
+  background: var(--surface-2);
+}
+
+.actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  align-items: center;
+}
+
+.fine {
+  color: var(--muted);
+  font-size: 14px;
+  margin-top: 14px;
+}
+
+.shot {
+  border-radius: 12px;
+  border: 1px solid var(--line);
+  box-shadow: var(--shadow);
+  overflow: hidden;
+  background: var(--surface);
+}
+
+/* Разделы */
+
+section {
+  padding: 56px 0;
+}
+
+section + section {
+  border-top: 1px solid var(--line);
+}
+
+h2 {
+  font-size: 30px;
+  line-height: 1.2;
+  margin: 0 0 10px;
+}
+
+.section-lead {
+  color: var(--ink-2);
+  margin: 0 0 32px;
+  max-width: 720px;
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 16px;
+}
+
+.card {
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  padding: 20px 22px;
+}
+
+.card h3 {
+  margin: 0 0 6px;
+  font-size: 18px;
+}
+
+.card p {
+  margin: 0;
+  color: var(--ink-2);
+  font-size: 15.5px;
+}
+
+.badge {
+  display: inline-block;
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--accent-ink);
+  background: var(--accent-soft);
+  border-radius: 6px;
+  padding: 1px 8px;
+  margin-left: 6px;
+  vertical-align: 2px;
+}
+
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 28px;
+}
+
+.gallery figure {
+  margin: 0;
+}
+
+.gallery figcaption {
+  color: var(--ink-2);
+  font-size: 15px;
+  margin-top: 10px;
+}
+
+.gallery a {
+  display: block;
+}
+
+.columns {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 32px;
+}
+
+.columns h3 {
+  margin: 0 0 8px;
+  font-size: 19px;
+}
+
+.columns ul,
+.columns ol {
+  margin: 0;
+  padding-left: 22px;
+  color: var(--ink-2);
+}
+
+.columns li + li {
+  margin-top: 6px;
+}
+
+.note {
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-left: 3px solid var(--accent);
+  border-radius: 10px;
+  padding: 14px 18px;
+  color: var(--ink-2);
+  margin-top: 24px;
+}
+
+code {
+  font-family: Consolas, "Cascadia Mono", monospace;
+  font-size: 0.92em;
+  background: var(--surface-2);
+  border-radius: 5px;
+  padding: 1px 5px;
+}
+
+/* Первые шаги */
+
+.steps {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  counter-reset: step;
+  display: grid;
+  gap: 14px;
+  max-width: 820px;
+}
+
+.steps li {
+  counter-increment: step;
+  display: grid;
+  grid-template-columns: 44px 1fr;
+  gap: 16px;
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  padding: 18px 20px;
+}
+
+.steps li::before {
+  content: counter(step);
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  background: var(--accent-soft);
+  color: var(--accent-ink);
+  font-weight: 700;
+}
+
+.steps h3 {
+  margin: 4px 0 4px;
+  font-size: 18px;
+}
+
+.steps p {
+  margin: 0;
+  color: var(--ink-2);
+}
+
+kbd {
+  font-family: inherit;
+  font-size: 0.85em;
+  border: 1px solid var(--line);
+  border-bottom-width: 2px;
+  border-radius: 5px;
+  padding: 0 5px;
+  background: var(--surface-2);
+}
+
+/* Что нового */
+
+.highlights {
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  padding: 18px 22px;
+  margin-top: 28px;
+  max-width: 820px;
+}
+
+.highlights h3 {
+  margin: 0 0 6px;
+  font-size: 18px;
+}
+
+.highlights ul,
+.release-body ul {
+  margin: 0 0 8px;
+  padding-left: 22px;
+  color: var(--ink-2);
+}
+
+.highlights li + li,
+.release-body li + li {
+  margin-top: 6px;
+}
+
+.releases {
+  display: grid;
+  gap: 16px;
+  max-width: 820px;
+}
+
+.release {
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  padding: 18px 22px;
+}
+
+.release h3 {
+  margin: 0 0 8px;
+  font-size: 19px;
+}
+
+.release h3 a {
+  color: var(--ink);
+  text-decoration: none;
+}
+
+.release h3 a:hover {
+  color: var(--accent-ink);
+}
+
+.release-body p {
+  margin: 0 0 8px;
+  color: var(--ink-2);
+}
+
+.loading {
+  color: var(--muted);
+}
+
+/* Кнопка "Скачать" под последней версией: отступ отделяет её от истории ниже. */
+.releases .after-latest {
+  margin: 6px 0 28px;
+}
+
+/* Подвал */
+
+.foot {
+  border-top: 1px solid var(--line);
+  padding: 28px 0 40px;
+  color: var(--muted);
+  font-size: 14px;
+}
+
+.foot .wrap {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px 24px;
+  align-items: center;
+}
+
+.foot a {
+  color: var(--ink-2);
+}
+
+/* Телефон и узкое окно */
+
+@media (max-width: 860px) {
+  .hero {
+    padding: 40px 0 32px;
+  }
+
+  .hero-grid,
+  .columns,
+  .gallery {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .cards {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .nav .optional {
+    display: none;
+  }
+}
+
+@media (max-width: 560px) {
+  .wrap {
+    padding: 0 16px;
+  }
+
+  .brand span {
+    display: none;
+  }
+}
