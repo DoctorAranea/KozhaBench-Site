@@ -490,6 +490,104 @@ kbd {
   margin: 6px 0 28px;
 }
 
+/* KozhaBench Pro: цена с условиями и способы купить */
+
+.pro-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1.15fr);
+  gap: 20px;
+  align-items: start;
+}
+
+.pro-plan,
+.pro-buy {
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  padding: 26px 28px;
+}
+
+.pro-plan {
+  border-color: var(--accent);
+  box-shadow: var(--shadow);
+}
+
+.pro-price {
+  font-size: 46px;
+  font-weight: 700;
+  line-height: 1.1;
+  color: var(--accent-ink);
+}
+
+.pro-price-note {
+  color: var(--muted);
+  margin: 4px 0 20px;
+}
+
+.pro-terms {
+  margin: 0;
+  padding-left: 22px;
+  color: var(--ink-2);
+}
+
+.pro-terms li + li {
+  margin-top: 8px;
+}
+
+.pro-buy h3 {
+  margin: 0 0 6px;
+  font-size: 19px;
+}
+
+.pro-buy > p {
+  margin: 0 0 18px;
+  color: var(--ink-2);
+}
+
+.pro-buy > .fine {
+  margin: 16px 0 0;
+  color: var(--muted);
+}
+
+.contacts {
+  display: grid;
+  gap: 10px;
+}
+
+.contact {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 12px 16px;
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  background: var(--surface-2);
+  color: var(--ink);
+  text-decoration: none;
+}
+
+.contact:hover {
+  border-color: var(--accent);
+}
+
+.contact svg {
+  flex: none;
+  color: var(--accent-ink);
+}
+
+.contact span {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.3;
+  min-width: 0;
+}
+
+.contact small {
+  color: var(--ink-2);
+  font-size: 14px;
+  overflow-wrap: anywhere;
+}
+
 /* Просмотр снимка поверх страницы */
 
 .shot {
@@ -583,7 +681,8 @@ body.viewer-open {
 
   .hero-grid,
   .columns,
-  .gallery {
+  .gallery,
+  .pro-grid {
     grid-template-columns: minmax(0, 1fr);
   }
 
@@ -603,5 +702,10 @@ body.viewer-open {
 
   .brand span {
     display: none;
+  }
+
+  .pro-plan,
+  .pro-buy {
+    padding: 20px;
   }
 }
