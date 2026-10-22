@@ -490,7 +490,23 @@ kbd {
   margin: 6px 0 28px;
 }
 
-/* KozhaBench Pro: цена с условиями и способы купить */
+/* KozhaBench Pro: снимок расчёта, цена с условиями и способы купить */
+
+.pro-shot {
+  margin: 0 0 28px;
+}
+
+/* Снимок окна не растягивается шире своего размера, иначе текст расчёта размывается. */
+.pro-shot a {
+  display: block;
+  max-width: 986px;
+}
+
+.pro-shot figcaption {
+  color: var(--ink-2);
+  font-size: 15px;
+  margin-top: 10px;
+}
 
 .pro-grid {
   display: grid;
